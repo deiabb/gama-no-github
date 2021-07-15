@@ -1,0 +1,26 @@
+import styled from "styled-components";
+//criar um componente que englobe e organize todas as nossas caixinhas, que é uma grid
+//é importante dar um sufixo pra ele para identificar melhor
+const MainGrid = styled.main `
+  width: 100%;
+  grid-gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  padding: 16px; 
+  .profileArea {
+    display: none;
+    @media(min-width: 860px) {
+      display: block;
+    }
+  }
+  @media(min-width: 860px) {
+    max-width: 1110px;
+    display: grid;
+    grid-template-areas: 
+    "profileArea welcomeArea profileRelationsArea";
+    grid-template-columns: 160px 1fr 312px;
+  } //1fr é uma fração
+`;
+
+export default MainGrid;
